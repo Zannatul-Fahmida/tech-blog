@@ -34,11 +34,11 @@ const blogReducer = (state = initialState, action) => {
     //     ...state,
     //     history: [...state.history, action.payload],
     //   };
-    // case DELETE_CONTENT:
-    //   return {
-    //     ...state,
-    //     blogs: state.blogs.filter((blog) => blog._id !== action.payload),
-    //   };
+    case DELETE_CONTENT:
+      return {
+        ...state,
+        blogs: state.blogs.filter((blog) => blog._id !== action.payload),
+      };
     // case UPDATE_CONTENT:
     //   return {
     //     ...state,

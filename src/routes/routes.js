@@ -1,6 +1,9 @@
 import { createBrowserRouter } from "react-router-dom";
 import Dashboard from "../layout/Dashboard/Dashboard";
 import Main from "../layout/Main/Main";
+import AddBlog from "../pages/Dashboard/AddBlog";
+import BlogList from "../pages/Dashboard/BlogList";
+import EditBlog from "../pages/Dashboard/EditBlog";
 import BlogDetails from "../pages/Main/BlogDetails";
 import Home from "../pages/Main/Home";
 import ReadingHistory from "../pages/Main/ReadingHistory";
@@ -33,7 +36,11 @@ const routes = createBrowserRouter([
         element: <BlogList />,
       },
       {
-        path: "add-product",
+        path: "editBlog/:blogId",
+        element: <EditBlog />,
+      },
+      {
+        path: "addBlog",
         element: <AddBlog />,
       },
     ],

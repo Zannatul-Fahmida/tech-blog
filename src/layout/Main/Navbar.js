@@ -18,7 +18,7 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
 const drawerWidth = 240;
-const navItems = ["home", "reading history", "Contact"];
+const navItems = ["home", "reading history", "dashboard"];
 
 const Navbar = (props) => {
   const { window } = props;
@@ -30,7 +30,7 @@ const Navbar = (props) => {
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
       <Typography variant="h6" sx={{ my: 2 }}>
-        MUI
+        Tech-blog
       </Typography>
       <Divider />
       <List>
@@ -39,7 +39,8 @@ const Navbar = (props) => {
             <Link
               to={
                 (item === "home" && "/") ||
-                (item === "reading history" && "/history")
+                (item === "reading history" && "/history") ||
+                item
               }
               style={{ textDecoration: "none" }}
             >
@@ -81,7 +82,8 @@ const Navbar = (props) => {
                 key={item}
                 to={
                   (item === "home" && "/") ||
-                  (item === "reading history" && "/history")
+                  (item === "reading history" && "/history") ||
+                  item
                 }
                 style={{ textDecoration: "none" }}
               >

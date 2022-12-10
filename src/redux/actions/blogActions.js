@@ -1,6 +1,5 @@
 import {
   GET_CONTENT,
-  BLOG_LOADED,
   DELETE_CONTENT,
   ADD_CONTENT,
   UPDATE_CONTENT,
@@ -28,12 +27,12 @@ export const singleBlog = (id) => {
 //   };
 // };
 
-// export const deleteBlog = (id) => {
-//   return {
-//     type: DELETE_CONTENT,
-//     payload: id,
-//   };
-// };
+export const deleteBlog = (id) => {
+  return {
+    type: DELETE_CONTENT,
+    payload: id,
+  };
+};
 
 // export const updateBlog = (data) => {
 //   return {
